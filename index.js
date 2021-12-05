@@ -8,6 +8,8 @@ const svg = require('./utils/svg')
 const logger = pino({ level: process.env.LOG_LEVEL || 'info' });
 
 const app = express()
+app.use(express.static('public'))
+app.use(compression())
 app.use(express.static(path.join(__dirname, 'public')))
 
 const CACHE_0 = 'max-age=0, no-cache, no-store, must-revalidate'
