@@ -1,20 +1,14 @@
 const express = require('express')
 const compression = require('compression')
 const pino = require('pino');
-const cache = require('./utils/cache')
+const path = require('path')
 const userInfo = require('./userInfo')
 const svg = require('./utils/svg')
 
 const logger = pino({ level: process.env.LOG_LEVEL || 'info' });
 
 const app = express()
-app.use(express.static('public'))
-app.use(compression())
-app.set('view engine', 'pug')
-
-app.get('/', (req, res) => {
-    res.render('index')
-});
+app.use(express.static(path.join(__dirname, 'public')))
 
 const CACHE_0 = 'max-age=0, no-cache, no-store, must-revalidate'
 const CACHE_10800 = 'max-age=10800'
@@ -84,6 +78,11 @@ app.get('/heart-beat', (req, res) => {
     logger.info('heart-beat')
 });
 
-const listener = app.listen(23333, () => {
-    logger.info('Your app is listening on port ' + listener.address().port)
+const port = process.env.PORT || 3000
+const host = process.env.HOST || ''
+
+app.server = app.listen(port, host, () => {
+  console.log(`server running @ http://${host ? host : 'localhost'}:${port}`)
 })
+
+module.exports = app

@@ -1,2 +1,0 @@
-language = "node"
-run = "LOG_LEVEL=debug node index.js | ./node_modules/.bin/pino-pretty"
