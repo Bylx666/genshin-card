@@ -17,7 +17,7 @@ const __API = {
 const HEADERS = {
   'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) miHoYoBBS/2.7.0',
   'Referer': 'https://webstatic.mihoyo.com/',
-  'Cookie': process.env.COOKIE,
+  'Cookie':  "UM_distinctid=17d0338cd3725-0e3c40351c2a3d-4c3e2679-15f900-17d0338cd403b; _ga_PQGG2CR601=GS1.1.1636626314.1.1.1636626375.0; _ga_ZBNHQCY81B=GS1.1.1637235988.1.1.1637235988.0; mi18nLang=zh-cn; _ga_HKTGWLY8PN=GS1.1.1637331944.1.1.1637331995.0; _ga_1JLDNKW30C=GS1.1.1640758169.1.1.1640759029.0; cookie_token=rPYNpVBBy2zmGi6YFUoKK9h1rR1pYZuBPqzVRUDI; account_id=276527759; ltoken=2aVswoobWbrNU3EncjSD7d8nhlVeVDjy8nMKVrwB; ltuid=276527759; _ga_ERMLSZ2QHQ=GS1.1.1641145860.1.0.1641145867.0; login_uid=276527759; login_ticket=C2DlEylBDVUac9W5vIwsRhwOyJr8JAolcr4qHobk; _ga=GA1.2.1888501457.1636626314; _gid=GA1.2.504070454.1641831112; CNZZDATA1275023096=541815888-1636625479-%7C1641823525; _gat=1; _MHYUUID=0cb535a4-d0dc-45e3-8563-1422b645f3ef",
   'x-rpc-app_version': '2.7.0',
   'x-rpc-client_type': 5, // web
   'DS': ''
